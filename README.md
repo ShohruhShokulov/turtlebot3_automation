@@ -1,4 +1,4 @@
-# Smart Campus Delivery TurtleBot3 (ROS 2 Foxy)
+# Smart Campus Delivery TurtleBot3 (ROS 2)
 
 **Individual Assignment Project - Smart Mobility Engineering Lab**
 
@@ -628,16 +628,11 @@ turtlebot3_automation/
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contributing
-
-Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
 ## Acknowledgments
 
-- Built on ROS 2 Foxy and Nav2 stack
+- Built on ROS 2 and Nav2 stack
 - Uses YOLOv8 from Ultralytics
 - Designed for ROBOTIS TurtleBot3 platform
 
 ## Contact
-
 For questions or support, please open an issue on GitHub.
