@@ -17,6 +17,21 @@ This project implements a complete delivery robot automation suite designed for 
 - **Custom QR-Docking** – Automatic room detection and docking when QR codes (ROOM_A, ROOM_B, etc.) are scanned
 - **Mock Testing** – Complete functionality demonstration without physical robot hardware
 
+## Demo Video
+
+Watch the TurtleBot3 autonomous navigation in action with RViz visualization and Gazebo simulation:
+
+![Campus Delivery Demo](demo/Demo.mp4)
+
+**Video Location:** `demo/Demo.mp4`
+
+The demo showcases:
+- Autonomous navigation between campus waypoints
+- Real-time path planning and obstacle avoidance
+- RViz visualization of robot pose, map, and trajectory
+- Gazebo simulation environment
+- Nav2 navigation stack in action
+
 ## System Architecture
 
 ### How It Works
