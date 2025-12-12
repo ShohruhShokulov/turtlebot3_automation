@@ -1,0 +1,21 @@
+# Smart Campus Delivery - Maintenance Configuration
+# Continuous health monitoring to prevent mid-route delivery failures
+# Monitors battery, diagnostics, and movement for delivery robot reliability
+
+campus_delivery_maintenance:
+  ros__parameters:
+    # ROS topics to monitor
+    battery_topic: "/battery_state"       # Battery voltage and percentage
+    diagnostics_topic: "/diagnostics"     # System diagnostic messages
+    cmd_vel_topic: "/cmd_vel"             # Robot velocity commands
+    
+    # Battery thresholds for delivery operations
+    battery_critical_voltage: 10.8  # Critical level - return to charging station!
+    battery_warning_voltage: 11.4   # Warning level - complete delivery & recharge
+    # Typical range: 12.4V (full) → 10.8V (critical) for LiPo batteries
+    
+    # Monitoring settings
+    report_period: 30.0  # Seconds between health reports
+    
+    # Logging directory
+    log_dir: "~/.ros/campus_delivery_logs"  # Health logs and audit trail

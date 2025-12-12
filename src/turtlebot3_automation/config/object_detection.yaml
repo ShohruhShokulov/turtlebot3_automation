@@ -1,0 +1,23 @@
+# Smart Campus Delivery - Object Detection Configuration
+# YOLO-based detection of campus obstacles for safe navigation
+# Detects: person, bicycle, backpack/suitcase (as box proxy)
+
+campus_obstacle_detection:
+  ros__parameters:
+    # Camera input
+    camera_topic: "/camera/color/image_raw"
+    
+    # YOLO model configuration
+    model_path: "~/.cache/ultralytics/yolov8n.pt"  # YOLOv8 nano model
+    confidence_threshold: 0.40  # Minimum confidence for detection (0-1)
+    inference_period: 0.2       # Seconds between inferences (0.2 = 5 Hz)
+    
+    # Campus-specific obstacle classes to detect
+    # person: Students, faculty, pedestrians
+    # bicycle: Bikes that may block pathways
+    # backpack: Large bags/packages (proxy for "box")
+    # suitcase: Luggage/packages (proxy for "box")
+    class_filter: ["person", "bicycle", "backpack", "suitcase"]
+    
+    # Visualization settings
+    marker_namespace: "campus_obstacles"  # RViz marker namespace

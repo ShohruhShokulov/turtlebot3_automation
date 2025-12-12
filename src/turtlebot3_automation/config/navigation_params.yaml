@@ -1,0 +1,46 @@
+# Smart Campus Delivery - Navigation Configuration
+# Defines waypoints for autonomous patrol between campus buildings
+# Route: Building A (Engineering) → Building B (Library) → Building C (Cafeteria)
+
+campus_delivery_navigation:
+  ros__parameters:
+    mode: "slam"  # SLAM mode for mapping or "nav" for navigation with existing map
+    global_frame: "map"
+    robot_frame: "base_link"
+    auto_start: true  # Automatically start patrol on launch
+    waypoint_follow_delay: 3.0  # Seconds to wait at each building before next delivery
+    
+    # Initial pose: Starting position at Building A
+    initial_pose:
+      frame_id: "map"
+      position:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      yaw: 0.0
+    
+    # Campus Building Waypoints for Delivery Route
+    waypoints:
+      # Building A - Engineering Department (Package Pickup)
+      - frame_id: "map"
+        position:
+          x: 0.0
+          y: 0.0
+          z: 0.0
+        yaw: 0.0
+      
+      # Building B - Library (Package Delivery)
+      - frame_id: "map"
+        position:
+          x: 3.0
+          y: 2.0
+          z: 0.0
+        yaw: 1.57  # Face east
+      
+      # Building C - Cafeteria (Package Delivery)
+      - frame_id: "map"
+        position:
+          x: 6.0
+          y: 0.5
+          z: 0.0
+        yaw: 3.14  # Face south

@@ -1,0 +1,27 @@
+# Smart Campus Delivery - QR-Docking Configuration
+# Enables automatic room identification and docking using QR codes
+# Supports multiple room targets for package delivery
+
+campus_qr_docking:
+  ros__parameters:
+    # List of valid room QR codes for delivery
+    target_rooms: ["ROOM_A", "ROOM_B", "ROOM_C", "ROOM_D", "ROOM_E"]
+    
+    # Camera and control topics
+    camera_topic: "/camera/color/image_raw"
+    cmd_vel_topic: "/cmd_vel"
+    
+    # Movement parameters for docking
+    linear_speed: 0.12        # Maximum forward speed (m/s)
+    angular_gain: 0.0025      # Gain for angular correction
+    distance_gain: 0.00025    # Gain for distance-based speed control
+    max_angular: 0.6          # Maximum angular velocity (rad/s)
+    max_linear: 0.18          # Maximum linear velocity (m/s)
+    docking_distance: 0.5     # Target distance from door (meters)
+    
+    # Room mappings (for reference)
+    # ROOM_A: Engineering Lab 101
+    # ROOM_B: Library Office 205
+    # ROOM_C: Faculty Lounge 310
+    # ROOM_D: Student Center 404
+    # ROOM_E: Admin Office 501
