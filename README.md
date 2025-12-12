@@ -21,7 +21,7 @@ This project implements a complete delivery robot automation suite designed for 
 
 Watch the TurtleBot3 autonomous navigation in action with RViz visualization and Gazebo simulation:
 
-![Campus Delivery Demo](demo/Demo.mp4)
+![Campus Delivery Demo](https://github.com/ShohruhShokulov/turtlebot3_automation/blob/main/demo/Demo.mp4)
 
 **Video Location:** `demo/Demo.mp4`
 
